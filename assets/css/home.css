@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+}
+
+.navbar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    flex-basis: calc(33.333% - 20px); /* Largeur de base pour trois éléments par ligne */
+    flex-grow: 1; /* Permet aux éléments de s'étendre pour remplir l'espace disponible */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
+
+.navbar img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Responsive pour les écrans de 768px ou moins */
+@media (max-width: 768px) {
+    .navbar a {
+        flex-basis: calc(50% - 20px); /* 2 éléments par ligne */
+    }
+}
+
+/* Responsive pour les écrans de 480px ou moins (petits écrans, comme les téléphones mobiles) */
+@media (max-width: 480px) {
+    .navbar a {
+        flex-basis: 100%; /* 1 élément par ligne */
+        font-size: 14px; /* Réduit la taille de la police sur les petits écrans */
+    }
+
+    .navbar img {
+        width: 80px; /* Réduit la taille des images */
+        height: 80px;
+    }
+}
