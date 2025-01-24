@@ -18,7 +18,7 @@
         <form action="index.php?page=5" method="post">
             <input type="email" class="input-field" name="email" placeholder="Adresse e-mail" required>
             <input type="password" class="input-field" name="mdp" placeholder="Mot de passe" required>
-            <button type="submit" class="login-button">Se connecter</button>
+            <button type="submit" class="login-button">Se connecters</button>
         </form>
         <a href="#" class="forgot-password">Mot de passe oublié ?</a>
     </div>
