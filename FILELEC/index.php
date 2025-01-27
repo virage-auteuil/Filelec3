@@ -132,11 +132,22 @@ $unControleur = new Controleur();
             }
             break;
         case 7:
-         require_once("principal/inscription.php");
+         require_once("vue/insert/vue_insert_inscription.php");
          break;
        
-            case 8:
+        case 8:
             require_once("vue/vue_profil.php");
+                
+            if (isset($_GET['action'])){
+                $action = $_GET['action']; 
+                $id_client = $_SESSION['id_client']; 
+                if ($action == "supProfil"){
+
+                    $unControleur->deleteClient($id_client); 
+                    session_destroy(); unset($_SESSION['email']);
+                    header("Location: index.php");
+                }
+            }                
             break;
 
           
