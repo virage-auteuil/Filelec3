@@ -21,10 +21,6 @@ class Modele {
         }
     }
 
-    public function insertImage() {
-
-        
-    }
 
 }
 ?>

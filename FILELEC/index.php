@@ -132,6 +132,9 @@ $unControleur = new Controleur();
             }
             break;
         case 7:
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            }
          require_once("vue/insert/vue_insert_inscription.php");
          break;
        
