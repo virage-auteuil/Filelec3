@@ -9,8 +9,10 @@
 <body>
  
     
-    <img src="img\autre_image\DALL┬ÀE 2025-01-15.jpg" width="1448" height="400" alt="Image principale">
-    
+    <img src="img\autre_image\DALL┬ÀE 2025-01-15.jpg" width="1532" height="400" alt="Image principale">
+    <br>
+    <br>
+    <br>
     <center>
         <div class="link-container">
             <div class="navbar">
