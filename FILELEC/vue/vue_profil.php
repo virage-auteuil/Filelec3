@@ -4,24 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page de Profil</title>
-    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="assets/css/profil.css">
 </head>
 <body>
     <div class="profile-container">
         <h1>Mon Profil</h1>
 
-        <!-- Section de la photo de profil -->
-        <div class="profile-picture-section">
-            <img src="img/profil_logo.png" alt="Photo de profil" class="profile-picture">
-            <form action="upload_photo.php" method="POST" enctype="multipart/form-data">
-                <label for="profile-picture">Changer de photo</label>
-                <input type="file" name="profile-picture" id="profile-picture" accept="image/*">
-                <button type="submit">Mettre à jour</button>
-            </form>
-        </div>
-
         <!-- Section des informations utilisateur -->
-        <form action="update_profile.php" method="POST" class="profile-form">
+        <form action="index.php?page=8&action=updateProfil" method="POST" class="profile-form">
             <div class="form-group">
                 <label for="nom">Nom :</label>
                 <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
@@ -43,6 +33,11 @@
             </div>
 
             <div class="form-group">
+                <label for="password">Email :</label>
+                <input type="email" name="email" id="email" placeholder="Nouveau email" required>
+            </div>
+
+            <div class="form-group">
                 <label for="password">Mot de passe :</label>
                 <input type="password" name="password" id="password" placeholder="Nouveau mot de passe" required>
             </div>
@@ -52,8 +47,9 @@
 
         <!-- Boutons de déconnexion et suppression -->
         <div class="action-buttons">
-            <a href="logout.php" class="logout-button">Se déconnecter</a>
-            <a href="delete_account.php" class="delete-button">Supprimer mon compte</a>
+            <a href="index.php?page=6" class="logout-button">Se déconnecter</a>
+            <a href="index.php?page=8&action=supProfil" class="delete-button" action="sup" onclick="return confirm('Êtes-vous sûr de vouloir supprimer votre compte ?')">Supprimer mon compte</a>
+
         </div>
     </div>
 </body>

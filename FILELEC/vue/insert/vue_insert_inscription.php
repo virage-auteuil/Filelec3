@@ -2,37 +2,24 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire d'Upload d'Image</title>
+    <title>Inscription à Fillelec</title>
+    <link rel="stylesheet" href="assets/css/inscription.css">
 </head>
 <body>
-    <h1>Formulaire d'Upload d'Image</h1>
-    
-    <!-- Formulaire d'upload -->
-    <form action="votre_script_php.php" method="POST" enctype="multipart/form-data">
-        <label for="image_file">Choisissez une image à télécharger :</label>
-        <br>
-        <input type="file" name="image_file" id="image_file" required>
-        <br><br>
-        <button type="submit">Envoyer l'image</button>
-    </form>
-
-    <?php
-        // Vérification des messages dans l'URL (ex: succès, erreurs)
-        if (isset($_GET['message'])) {
-            $message = $_GET['message'];
-            if ($message == 'success') {
-                echo "<p>Image téléchargée avec succès !</p>";
-            } elseif ($message == 'erreur_fichier_non_trouve') {
-                echo "<p>Erreur : Aucun fichier n'a été sélectionné.</p>";
-            } elseif ($message == 'erreur_extension_non_autorisee') {
-                echo "<p>Erreur : L'extension du fichier n'est pas autorisée.</p>";
-            } elseif ($message == 'erreur_creation_repertoire') {
-                echo "<p>Erreur : Impossible de créer le répertoire pour l'image.</p>";
-            } elseif ($message == 'erreur_deplacement_fichier') {
-                echo "<p>Erreur : Impossible de déplacer le fichier téléchargé.</p>";
-            }
-        }
-    ?>
+    <center>
+        <div class="signup-container">
+            <h2>Inscription à Fillelec</h2>
+            <form method="POST">
+                <input type="text" name="prenom" placeholder="Prénom" required>
+                <input type="text" name="nom" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="Adresse e-mail" required>
+                <input type="tel" name="telephone" placeholder="Numéro de téléphone" required>
+                <input type="text" name="adresse" placeholder="Adresse domicile" required>
+                <input type="password" name="mdp" placeholder="Mot de passe" required>
+                <button type="submit" name="Valider">S'inscrire</button>
+                <a href="index.php?page=5">Déjà inscrit ? Connectez-vous</a>
+            </form>
+        </div>
+    </center>
 </body>
 </html>

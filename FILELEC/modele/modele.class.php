@@ -40,7 +40,26 @@
             //execution de la requete
             $exec->execute($donnees); //execute methode PDO : avec envoie de données.
         }
+        public function deleteClient($id_client) {
+            $requete ="delete from client where id_client = :id_client ;";
+            $donnees = array (":id_client"=> $id_client);
+            $exec = $this->unPdo->prepare($requete);
+            $exec->execute($donnees);
+        }
+        public function updateClient($tab){
+            $requete ="update client set nom =:nom, prenom =:prenom, adresse = :adresse, email = :email, tel = :tel where id_client =:id_client ;";
+            $donnees= array(
+                ":nom"=>$tab['nom'],
+                ":prenom"=>$tab['prenom'],
+                ":adresse"=>$tab['adresse'],
+                ":email"=>$tab['email'],
+                ":tel"=>$tab['telephone'],
+                ":id_client"=>$tab['id_client']
+            );
+            $exec = $this->unPdo->prepare($requete);
+            $exec->execute($donnees);
 
+        }
 
         public function verifConnexion($email,$mdp) {
             $requete ="select * from client where email_client = :email and mdp_client = :mdp;";
@@ -51,20 +70,3 @@
         }
         
     }
-
-
-
-
-        // Gestion de l'inscription
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $tab = [
-                'prenom' =>$_POST['prenom'],
-                'nom' => $_POST['nom'],
-                'email' => $_POST['email'],
-                'telephone' => $_POST['telephone'],
-                'adresse' => $_POST['adresse'],
-                'mdp' => $_POST['mdp']
-            ];
-
-            $unControleur->insertClient($tab);
-        }

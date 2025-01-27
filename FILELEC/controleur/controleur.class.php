@@ -26,5 +26,9 @@
 
             return $unUser;
         }
+
+        public function deleteClient ($id_client){
+            $this->unModele->deleteClient($id_client);
+        }
     }
 ?>    

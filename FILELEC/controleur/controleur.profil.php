@@ -1,12 +1,17 @@
 <?php
-    require_once("modele/modele.profil.php");
-    class Controleur {
-        /*le controleur realise les controles des données avan leur injections dans la BDD
-        ou aprè leur extraction de la BDD. Il appelle le modèle pour réaliser les requetes. */
-        private $unProfilModele ; //instance de la classe Modele
 
-        public function __construct (){
-            //instanciation du Modele
-            $this->unProfilModele = new Modele();
-        }
-    }
+	require_once("vue/vue_profil.php");
+
+    if (isset($_SESSION['id_client'])){
+		$leClient = null; 
+		if (isset($_GET['action']) && isset($_GET['id_client'])){
+			$action = $_GET['action']; 
+			$id_client = $_GET['id_client']; 
+
+			switch ($action){
+				case "sup" : $unControleur->deleteClient($id_client); break;
+			}
+		}
+	}
+
+?>
