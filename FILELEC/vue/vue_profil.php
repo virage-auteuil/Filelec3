@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page de Profil</title>
-    <link rel="stylesheet" href="assets/css/profil.css">
+    <link rel="stylesheet" href="assets\css\profil.css">
 </head>
 <body>
     <div class="profile-container">
