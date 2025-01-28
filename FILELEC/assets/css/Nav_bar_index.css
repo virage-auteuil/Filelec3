@@ -1,92 +1,94 @@
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-        /* Style de la barre de navigation */
-        nav {
-            background-color: #007BFF; /* Bleu foncé pour le fond de la barre */
-            padding: 10px 0;
-            width: 100%;
-            display: flex; /* Flexbox pour organiser les éléments */
-            justify-content: center; /* Les éléments sont espacés */
-            align-items: center; /* Centrer les éléments verticalement */
-            box-sizing: border-box;
-        }
+/* Style de la barre de navigation */
+nav {
+    background-color: #007BFF; /* Bleu foncé pour le fond de la barre */
+    padding: 10px 0;
+    width: 100%;
+    display: flex; /* Flexbox pour organiser les éléments */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    box-sizing: border-box;
+}
 
-        /* Style des liens de navigation */
-        .link-container {
-            margin: 0 15px;
-            display: inline-block; /* Afficher les éléments sur une ligne */
-        }
+/* Style des liens de navigation */
+.link-container {
+    margin: 0 15px;
+    display: inline-block; /* Afficher les éléments sur une ligne */
+}
 
-        .link-container a {
-            text-decoration: none;
-            color: black;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-            display: block; /* Pour que le padding affecte le lien sur toute la zone */
-        }
+.link-container a {
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Changement : Liens blancs pour plus de contraste */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    display: block; /* Le padding affecte toute la zone du lien */
+}
 
-        .link-container a:hover {
-            background-color: #4a5b63; /* Couleur au survol */
-        }
+.link-container a:hover {
+    background-color: #0056b3; /* Couleur de survol ajustée pour correspondre au bleu principal */
+}
 
-        /* Style pour le titre */
-        h1 {
-            text-align: center;
-            color: white;
-        }
+/* Style pour le titre */
+h1 {
+    text-align: center;
+    color: white;
+}
 
-        .profile-container {
-            display: flex; /* Flexbox pour le contenu */
-            align-items: flex; /* Centrer verticalement */
-            position: relative; /* Nécessaire pour le menu déroulant */
-        }
+/* Conteneur du profil */
+.profile-container-nav {
+    display: flex; /* Flexbox pour organiser les éléments */
+    align-items: center; /* Centrer verticalement */
+    position: relative; /* Nécessaire pour positionner le menu déroulant */
+}
 
-        /* Logo de profil */
-        .profile-logo {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-        }
+/* Logo de profil */
+.profile-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover; /* Ajustement pour éviter toute déformation de l'image */
+}
 
-        .profile-logo:hover {
-            transform: scale(1.1); /* Agrandissement au survol */
-        }
+.profile-logo:hover {
+    transform: scale(1.1); /* Agrandissement au survol */
+}
 
-        /* Menu déroulant */
-        .dropdown {
-            display: none; /* Masqué par défaut */
-            position: absolute;
-            top: 50px; /* Sous le logo */
-            right: 1;
-            background-color: #444;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
+/* Menu déroulant */
+.dropdown {
+    display: none; /* Masqué par défaut */
+    position: absolute;
+    top: 40px; /* Sous le logo */
+    right: 0; /* Ajustement pour aligner à droite */
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
 
-        .dropdown a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 12px;
-            display: block;
-            transition: background-color 0.2s ease;
-        }
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block; /* Chaque lien occupe une ligne */
+    transition: background-color 0.2s ease;
+}
 
-        .dropdown a:hover {
-            background-color: #555;
-        }
+.dropdown a:hover {
+    background-color: #555;
+}
 
-        /* Affichage du menu déroulant au survol */
-        .profile-container:hover .dropdown {
-            display: block;
-        }
+/* Affichage du menu déroulant au survol */
+.profile-container-nav:hover .dropdown {
+    display: block;
+}
