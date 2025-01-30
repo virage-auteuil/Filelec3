@@ -63,7 +63,7 @@
 
         public function verifConnexion($email,$mdp) {
             $requete ="select * from client where email_client = :email and mdp_client = :mdp;";
-            $donnees= array(":email" =>$email, ":mdp" =>$mdp);
+            $donnees= array(":email" =>$email, ":mdp" => $mdp);
             $exec = $this->unPdo->prepare($requete);
             $exec->execute ($donnees);
             return $exec->fetch();

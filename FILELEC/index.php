@@ -60,9 +60,14 @@ $unControleur = new Controleur();
        
         <nav>
 
-    <div class="link-container">
-        <a href="index.php?page=1">Accueil</a>
-    </div>
+            <div class="link-container">
+                <a href="index.php?page=1">Accueil</a>
+            </div>
+
+            <div class="link-container">
+                <a href="index.php?page=9">Catalogue</a>
+                
+            </div>
 
             </div>
             <div class="link-container">
@@ -74,24 +79,24 @@ $unControleur = new Controleur();
                 
             </div>
 
-            <?php if (isset($_SESSION['email'])): ?>
-                <div class="profile-container-nav">
-                    <img src="img\image_navbar\profil_logo.png" alt="Profil" class="profile-logo">
-                    <div class="dropdown">
-                        <a href="index.php?page=8">Profil</a>
-                        <a href="index.php?page=6">Déconnexion</a>
+            <div class="right-container">
+                <?php if (isset($_SESSION['email'])): ?>
+                    <div class="profile-container-nav">
+                        <img src="img\image_navbar\profil_logo.png" alt="Profil" class="profile-logo">
+                        <div class="dropdown">
+                            <a href="index.php?page=8">Profil</a>
+                            <a href="index.php?page=6">Déconnexion</a>
+                        </div>
                     </div>
-                </div>
-            <?php else: ?>
-                <div class="link-container">
-                    <a href="index.php?page=5">Connexion</a>
-                    
-                </div>
-                <div class="link-container">
-                    <a href="index.php?page=7">Inscription</a>
-                    
-                </div>
-            <?php endif; ?>
+                <?php else: ?>
+                    <div class="link-container">
+                        <a href="index.php?page=5">Connexion</a>
+                    </div>
+                    <div class="link-container">
+                        <a href="index.php?page=7">Inscription</a>
+                    </div>
+                <?php endif; ?>
+            </div>
     </center>
     </nav>
 
@@ -133,7 +138,16 @@ $unControleur = new Controleur();
             break;
         case 7:
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $tab = [
+                    'prenom' => htmlspecialchars($_POST['prenom']),
+                    'nom' => htmlspecialchars($_POST['nom']),
+                    'email' => htmlspecialchars($_POST['email']),
+                    'telephone' => htmlspecialchars($_POST['telephone']),
+                    'adresse' => htmlspecialchars($_POST['adresse']),
+                    'mdp' => htmlspecialchars($_POST['mdp'])
+                ];
 
+                $unControleur->insertClient($tab);
             }
          require_once("vue/insert/vue_insert_inscription.php");
          break;
@@ -152,8 +166,9 @@ $unControleur = new Controleur();
                 }
             }                
             break;
-
-          
+        case 9:
+            require_once("vue/vue_catalogue.php");
+            break;
 
         default:
             echo "<p>Page introuvable.</p>";

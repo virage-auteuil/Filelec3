@@ -11,7 +11,7 @@ nav {
     padding: 10px 0;
     width: 100%;
     display: flex; /* Flexbox pour organiser les éléments */
-    justify-content: center; /* Centrer horizontalement */
+    justify-content: space-between; /* Espace entre les éléments */
     align-items: center; /* Centrer verticalement */
     box-sizing: border-box;
 }
@@ -40,6 +40,13 @@ nav {
 h1 {
     text-align: center;
     color: white;
+}
+
+/* Conteneur pour les éléments à droite */
+.right-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pousse les éléments vers la droite */
 }
 
 /* Conteneur du profil */

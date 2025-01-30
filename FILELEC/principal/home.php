@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets\css\recherche_barre_index.css">
 </head>
 <body>
- 
-    
-    <img src="img\autre_image\DALL┬ÀE 2025-01-15.jpg" width="1532" height="400" alt="Image principale">
+    <div class="image-container">
+        <img src="img\autre_image\DALL┬ÀE 2025-01-15.jpg" alt="Image principale">
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher...">
+            <button type="submit">Rechercher</button>
+        </div>
+    </div>
     <br>
     <br>
     <br>
