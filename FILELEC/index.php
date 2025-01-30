@@ -113,7 +113,7 @@ $unControleur = new Controleur();
             require_once("principal/home.php");
             break;
         case 2:
-            require_once("controleur/apropos.php");
+            require_once("principal/Apropos.php");
             break;
         case 3:
             require_once("principal/contact.php");
