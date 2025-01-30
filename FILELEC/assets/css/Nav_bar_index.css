@@ -7,7 +7,7 @@ body {
 
 /* Style de la barre de navigation */
 nav {
-    background-color: #007BFF; /* Bleu foncé pour le fond de la barre */
+    background-color: #007bff; /* Bleu foncé pour le fond de la barre */
     padding: 10px 0;
     width: 100%;
     display: flex; /* Flexbox pour organiser les éléments */
@@ -24,10 +24,10 @@ nav {
 
 .link-container a {
     text-decoration: none;
-    color: rgb(0, 0, 0); /* Changement : Liens blancs pour plus de contraste */
+    color: rgb(0, 0, 0); /* Changement : Liens noirs pour plus de contraste */
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 18px; /* Réduction de la taille de la police */
     transition: background-color 0.3s ease;
     display: block; /* Le padding affecte toute la zone du lien */
 }
@@ -38,8 +38,10 @@ nav {
 
 /* Style pour le titre */
 h1 {
-    text-align: center;
-    color: white;
+    text-align: left; /* Aligner à gauche */
+    margin-left: 20px; /* Ajouter un espace depuis le mur gauche */
+    color: rgb(255, 255, 255);
+    font-size: 32px; /* Taille de police augmentée */
 }
 
 /* Conteneur pour les éléments à droite */
