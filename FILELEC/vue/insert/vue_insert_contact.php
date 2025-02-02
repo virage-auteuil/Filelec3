@@ -11,9 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $prenom = htmlspecialchars($_POST['prenom']);
     $email = htmlspecialchars($_POST['email']);
     $telephone = htmlspecialchars($_POST['telephone']);
-    $adresse = htmlspecialchars($_POST['adresse']);
-    $code_postal = htmlspecialchars($_POST['code_postal']);
-    $ville = htmlspecialchars($_POST['ville']);
     $message = htmlspecialchars($_POST['message']);
 
     // Créer une instance de PHPMailer
@@ -36,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Contenu de l'email
         $mail->isHTML(true);
         $mail->Subject = 'Nouveau message de contact';
-        $mail->Body    = "Nom: $nom<br>Prénom: $prenom<br>Email: $email<br>Téléphone: $telephone<br>Adresse: $adresse<br>Code Postal: $code_postal<br>Ville: $ville<br>Message:<br>$message";
+        $mail->Body    = "Nom: $nom<br>Prénom: $prenom<br>Email: $email<br>Téléphone: $telephone <br>Message: $message";
 
         // Envoi de l'email
         $mail->send();

@@ -29,18 +29,6 @@
                 <input type="tel" id="telephone" name="telephone" required>
             </div>
             <div class="form-group">
-                <label for="adresse">Adresse complète</label>
-                <input type="text" id="adresse" name="adresse" required>
-            </div>
-            <div class="form-group">
-                <label for="code_postal">Code Postal</label>
-                <input type="text" id="code_postal" name="code_postal" required>
-            </div>
-            <div class="form-group">
-                <label for="ville">Ville</label>
-                <input type="text" id="ville" name="ville" required>
-            </div>
-            <div class="form-group">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
             </div>

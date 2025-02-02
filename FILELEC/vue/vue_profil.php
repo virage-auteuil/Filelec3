@@ -14,32 +14,32 @@
         <form action="index.php?page=8&action=updateProfil" method="POST" class="profile-form">
             <div class="form-group">
                 <label for="nom">Nom :</label>
-                <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+                <input type="text" name="nom" id="nom" value="<?= $_SESSION['nom'] ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="prenom">Prénom :</label>
-                <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required>
+                <input type="text" name="prenom" id="prenom" value="<?= $_SESSION['prenom'] ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="telephone">Téléphone :</label>
-                <input type="tel" name="telephone" id="telephone" placeholder="Votre téléphone" required>
+                <input type="tel" name="telephone" id="telephone" value="<?= $_SESSION['telephone'] ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="adresse">Adresse de domicile :</label>
-                <input type="text" name="adresse" id="adresse" placeholder="Votre adresse" required>
+                <input type="text" name="adresse" id="adresse" value="<?= $_SESSION['adresse'] ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="password">Email :</label>
-                <input type="email" name="email" id="email" placeholder="Nouveau email" required>
+                <input type="email" name="email" id="email" value="<?= $_SESSION['email'] ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="password">Mot de passe :</label>
-                <input type="password" name="password" id="password" placeholder="Nouveau mot de passe" required>
+                <input type="password" name="password" id="password" value="<?= $_SESSION['mdp'] ?>" required>
             </div>
 
             <button type="submit" class="save-button">Enregistrer les modifications</button>
