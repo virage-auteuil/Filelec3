@@ -88,7 +88,7 @@ $unControleur = new Controleur();
                         <a href="index.php?page=5">Connexion</a>
                     </div>
                     <div class="link-container">
-                        <a href="index.php?page=7">Inscription</a>
+                        <a href="index.php?page=7">Inscriptions</a>
                     </div>
                 <?php endif; ?>
             </div>
