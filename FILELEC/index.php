@@ -79,7 +79,7 @@ $unControleur = new Controleur();
                     <div class="profile-container-nav">
                         <img src="img\image_navbar\profil_logo.png" alt="Profil" class="profile-logo">
                         <div class="dropdown">
-                            <a href="index.php?page=8">Profil</a>
+                            <a href="index.php?page=8">Profils</a>
                             <a href="index.php?page=6">Déconnexion</a>
                         </div>
                     </div>
