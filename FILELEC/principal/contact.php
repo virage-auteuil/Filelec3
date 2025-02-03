@@ -29,6 +29,7 @@
                 <input type="tel" id="telephone" name="telephone" required>
             </div>
             <div class="form-group">
+<<<<<<< HEAD
                 <label for="adresse">Adresse complètes</label>
                 <input type="text" id="adresse" name="adresse" required>
             </div>
@@ -41,6 +42,7 @@
                 <input type="text" id="ville" name="ville" required>
             </div>
             <div class="form-group">
+
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
             </div>
@@ -53,7 +55,7 @@
             event.preventDefault();
             Swal.fire({
                 title: "Message envoyé!",
-                text: "Nous avons bien reçu votre message et nous vous contacterons sous peu.",
+                text: "Nous avons bien reçu votre messages et nous vous contacterons sous peu.",
                 icon: "success"
             }).then(() => {
                 this.submit();

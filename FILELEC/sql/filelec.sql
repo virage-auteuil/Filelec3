@@ -48,7 +48,14 @@ create table article (
     id_cat int(10) not null,
     primary key (id_article),
     foreign key (id_cat) references categorie(id_cat),
+    foreign key (id_marque) references marque(id_marque),
     unique (id_article)
+);
+
+create table marque (
+    id_marque int(10) not null auto_increment,
+    nom_marque varchar(25) not null,
+    primary key (id_marque)
 );
 ----------------------------------------------------
 create table image_article (

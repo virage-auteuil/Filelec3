@@ -18,15 +18,14 @@ h2 {
 
 /* Form container */
 .contact-container {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 50px;
+    background: #007BFF;
+    padding: 80px; /* Réduction du padding pour diminuer la taille interne */
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    width: 80%;
+    width: 50%;
     max-width: 650px;
-    margin: 0 auto;
-    animation: fadeInUp 1s ease-in-out;
+    margin: 100px auto; /* Ajout de marge supérieure pour l'éloigner de la navbar */
 }
+
 
 /* Label styles */
 label {
@@ -34,7 +33,7 @@ label {
     font-size: 1.1rem;
     color: #fff;
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: 600px;
 }
 
 /* Input fields and textareas */
@@ -45,7 +44,7 @@ textarea {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #2e2e2e;
+    background-color: #ffffff;
     color: #fff;
     font-size: 1rem;
     transition: border 0.3s ease-in-out;
@@ -79,7 +78,7 @@ button:hover {
 /* Form hover effects */
 .contact-container:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(51, 0, 255, 0.2);
 }
 
 /* Background animation */

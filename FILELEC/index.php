@@ -53,7 +53,7 @@ $unControleur = new Controleur();
         }
         ?>
          <nav>
-        <h1>Bienvenue sur Fillelec</h1>
+        <h1>Fillelec</h1>
         
             <div class="link-container">
                 <a href="index.php?page=1">Accueil</a>
