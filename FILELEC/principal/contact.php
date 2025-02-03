@@ -29,7 +29,7 @@
                 <input type="tel" id="telephone" name="telephone" required>
             </div>
             <div class="form-group">
-                <label for="adresse">Adresse complète</label>
+                <label for="adresse">Adresse complètes</label>
                 <input type="text" id="adresse" name="adresse" required>
             </div>
             <div class="form-group">
