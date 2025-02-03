@@ -53,7 +53,7 @@
             event.preventDefault();
             Swal.fire({
                 title: "Message envoyé!",
-                text: "Nous avons bien reçu votre message et nous vous contacterons sous peu.",
+                text: "Nous avons bien reçu votre messages et nous vous contacterons sous peu.",
                 icon: "success"
             }).then(() => {
                 this.submit();
